@@ -1,0 +1,16 @@
+{
+    "orgName": "GenAI Scratch Org",
+    "edition": "Developer",
+    "features": ["Einstein1AIPlatform", "Communities", "Chatbot"],
+    "settings": {
+        "einsteinGptSettings" : {
+            "enableEinsteinGptPlatform" : true
+        },
+        "communitiesSettings": {
+            "enableNetworksEnabled" : true
+        },
+        "botSettings": {
+            "enableBots" : true
+        }
+    }
+}
