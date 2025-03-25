@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <description>This topic addresses customer queries or questions about authorized centers or trek stores. The aim is to provide quick and accurate answers to questions about store opening hours, store openings, holidays, contact details, etc.</description>
+    <developerName>authorized_centers_inquiries</developerName>
+    <genAiFunctions>
+        <functionName>Web_Search</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>You must call the agent action &apos;Web Search&apos; and pass the user question.
+
+Do not ask the user for location and include California in the query as location to provide an appropriate answer.
+
+Then, from the answer obtained, explain it in a clear and concise format.
+
+for example if the customer says: can you tell me which are the nearest authorized centers?
+
+limit the result to 3 places and remove the description from answer.</description>
+        <developerName>instruction_youmustcal0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_youmustcal0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>format the output list with rich text, bold and add some emojis</description>
+        <developerName>instruction_formattheo1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_formattheo1</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>authorized centers inquiries</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>The agent will answer questions related to: 
+Store location (address), opening hours and holidays, store contact details (phone or email), nearest stores, store description, promotions associated with stores, etc.</scope>
+</GenAiPlugin>

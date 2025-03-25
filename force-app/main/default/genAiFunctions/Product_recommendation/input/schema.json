@@ -1,0 +1,21 @@
+{
+  "required" : [ "Input:Query" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:Query" : {
+      "title" : "Query",
+      "description" : "the string of the customer looking for some ebykes products .example: im looking for bykes under 2000$",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "citationMode" : {
+      "title" : "Citation Mode",
+      "description" : "Select Citation Mode",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

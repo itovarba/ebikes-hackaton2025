@@ -1,0 +1,21 @@
+{
+  "required" : [ "query", "siteLink" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "query" : {
+      "title" : "query",
+      "description" : "A string with the user query or question\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "siteLink" : {
+      "title" : "siteLink",
+      "description" : "the literal 'https://www.trekbikes.com/es/es_ES/store-finder/'",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

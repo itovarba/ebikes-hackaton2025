@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Tries to retrieve a product recommendation for bykes, looking for similar products aligned with customer requirements. Example : im looking for bykes under 2000$</description>
+    <invocationTarget>Product_recommendation</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <masterLabel>Product recommendation</masterLabel>
+</GenAiFunction>

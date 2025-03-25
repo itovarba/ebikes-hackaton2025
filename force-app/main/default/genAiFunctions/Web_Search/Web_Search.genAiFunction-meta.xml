@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>You should look for information related to trek or authorized centers and provide a response for store related questions or queries for trek (for example supermarkets, hypermarkets, store hours, location, products holidays, etc.)</description>
+    <invocationTarget>SearchWebsiteContent</invocationTarget>
+    <invocationTargetType>apex</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <masterLabel>Web Search</masterLabel>
+</GenAiFunction>

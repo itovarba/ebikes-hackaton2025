@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <aiPluginUtterances>
+        <developerName>utterance_whenismypa0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>utterance_whenismypa0</masterLabel>
+        <utterance>When is my payment due?</utterance>
+    </aiPluginUtterances>
+    <aiPluginUtterances>
+        <developerName>utterance_whatifther1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>utterance_whatifther1</masterLabel>
+        <utterance>What if there is an error on the customer invoice?</utterance>
+    </aiPluginUtterances>
+    <aiPluginUtterances>
+        <developerName>utterance_whyamifaci2</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>utterance_whyamifaci2</masterLabel>
+        <utterance>Why am I facing with a &quot;Service Unavailable issue&quot;?</utterance>
+    </aiPluginUtterances>
+    <aiPluginUtterances>
+        <developerName>utterance_whataremyf3</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>utterance_whataremyf3</masterLabel>
+        <utterance>What are my finance conditions?</utterance>
+    </aiPluginUtterances>
+    <description>It should be able to pick up the context of the conversation with the user and provide a correct answer by searching Knowledge articles and data libraries</description>
+    <developerName>Answer_with_Knowledge_Info</developerName>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__AnswerQuestionsWithKnowledge</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Do not declare your intent i.e. &quot;I will now retrieve the data&quot; - Just fetch the data</description>
+        <developerName>instruction_donotdecla0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_donotdecla0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Identify the use case the user asks about. If unclear, confirm with the user and make a suggestion based on the query context and history</description>
+        <developerName>instruction_identifyth1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_identifyth1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Provides the correct information by searching the Knowledge articles</description>
+        <developerName>instruction_providesth2</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_providesth2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Show the information in a clear and concise way. Mark in bold type the most relevant words and if necessary adding a link to the knowledge article from where you have obtained the information</description>
+        <developerName>instruction_showtheinf3</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_showtheinf3</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>if the user ask what are the finance conditions to purchase a byke, search in data libraries this information</description>
+        <developerName>instruction_iftheusera4</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_iftheusera4</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Answer with Knowledge Info</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to search for information that the user needs in the Knowledge articles and provide a correct answer</scope>
+</GenAiPlugin>

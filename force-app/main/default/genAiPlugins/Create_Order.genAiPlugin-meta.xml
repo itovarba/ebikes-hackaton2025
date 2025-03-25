@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <aiPluginUtterances>
+        <developerName>utterance_proceedwit0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>utterance_proceedwit0</masterLabel>
+        <utterance>Proceed with the creation of the order</utterance>
+    </aiPluginUtterances>
+    <aiPluginUtterances>
+        <developerName>utterance_iwouldlike1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>utterance_iwouldlike1</masterLabel>
+        <utterance>I would like to purchase this product</utterance>
+    </aiPluginUtterances>
+    <description>You have to create a Reseller order for the customer when it is requested</description>
+    <developerName>Create_Order</developerName>
+    <genAiFunctions>
+        <functionName>Create_Reseller_Order</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__IdentifyRecordByName</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Accompanied by emoticons related to the created reseller order. The emoticons must be displayed on the right of titles of each field, before the value itself.</description>
+        <developerName>instruction_accompanie0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_accompanie0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Create a Reseller Order with the product selected by the customer.</description>
+        <developerName>instruction_createares1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_createares1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Include in your response that the purchase returning period is for 30 days after the purchase date.</description>
+        <developerName>instruction_includeiny2</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_includeiny2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Include in your response that an email has been sent to the customer with the created order details, financiation information and a QR code to request a return of the product.</description>
+        <developerName>instruction_includeiny3</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_includeiny3</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Ask about the customers name if you don&apos;t know who it is</description>
+        <developerName>instruction_askaboutth4</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_askaboutth4</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Map the customer name with an account id based on the account name, don&apos;t use the user id</description>
+        <developerName>instruction_mapthecust5</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_mapthecust5</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Create Order</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Create a Reseller Order</scope>
+</GenAiPlugin>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>query of the customer looking for product recommendations</description>
+    <developerName>Product_recommendation</developerName>
+    <masterLabel>Product recommendation</masterLabel>
+    <templateVersions>
+        <content>&quot;Analyze the following customer request and compare it with the available data in the {!$EinsteinSearch:File_products_1Cx_GDuc581916e.results}. Identify the best matching e-bike based on exact or similar values in battery life, weight, category, level, material, and other key parameters. If no exact match exists, suggest the closest alternatives and explain why they are suitable. Format the response using emojis for engagement and bold text for key details. Include the url of the recommendation for the user to navigate.
+consider that the parameter weight, 
+
+Customer Request:
+{!$Input:Query}
+
+Response Guidelines:
+Recommendation: suggest the best match.
+Product Match 🔍: Clearly highlight the best e-bike using bold text. Include the link of the record.
+Key Features ⚙️: List the most relevant specifications that match the customer&apos;s request and include a picture of the bike.
+Alternative Options 🔄: If no exact match is found, suggest up to 3 alternative models with brief justifications.
+Final Advice 💡: Provide a short, engaging closing statement encouraging the customer to explore the options further.
+Example Response Format:
+🚴‍♂️ Top Recommendation: FUSE X2
+✅ Price: 1000$
+✅ Battery Life: 5.5 hours
+✅ Weight: 18200g .
+✅ Category: Commuter
+✅ Material: Aluminum
+✅ Motor: 252 watt, 75Nm
+
+⭐ Why this bike? It closely matches your needs with a lightweight frame and extended battery life for smooth commuting!
+🔄 Alternative Options:
+1️⃣ FUSE X3 – Slightly more battery life (5.8h) and a stronger motor.
+2️⃣ DYNAMO X1 – If you&apos;re open to a mountain e-bike, this offers high performance.
+3️⃣ ELECTRA X1 – A balance between performance and affordability.
+💡 Let us know which option works best for you, and we’ll be happy to assist further! 🚲✨&quot;
+provide a quick and short answer directly oriented to the customer. Uses an enthusiastic tone related to the world of cycling.
+</content>
+        <inputs>
+            <apiName>Query</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Query</masterLabel>
+            <referenceName>Input:Query</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultGPT4Omni</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/File_products_1Cx_GDuc581916e</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:Query}</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:File_products_1Cx_GDuc581916e</referenceName>
+        </templateDataProviders>
+    </templateVersions>
+    <templateVersions>
+        <content>&quot;Analyze the following customer request and compare it with the available data in the {!$EinsteinSearch:File_products_1Cx_GDuc581916e.results}. Identify the best matching e-bike based on exact or similar values in battery life, weight, category, level, material, and other key parameters. If no exact match exists, suggest the closest alternatives and explain why they are suitable. Format the response using emojis for engagement and bold text for key details. Include the url of the recommendation for the user to navigate.
+consider that the parameter weight, 
+
+Customer Request:
+{!$Input:Query}
+
+Response Guidelines:
+Recommendation: suggest the best match.
+Product Match 🔍: Clearly highlight the best e-bike using bold text. Include the link of the record.
+Key Features ⚙️: List the most relevant specifications that match the customer&apos;s request and include a picture of the bike.
+Alternative Options 🔄: If no exact match is found, suggest up to 3 alternative models with brief justifications.
+Final Advice 💡: Provide a short, engaging closing statement encouraging the customer to explore the options further.
+Example Response Format:
+🚴‍♂️ Top Recommendation: FUSE X2
+✅ Price: 1000$
+✅ Battery Life: 5.5 hours
+✅ Weight: 18200g .
+✅ Category: Commuter
+✅ Material: Aluminum
+✅ Motor: 252 watt, 75Nm
+
+⭐ Why this bike? It closely matches your needs with a lightweight frame and extended battery life for smooth commuting!
+🔄 Alternative Options:
+1️⃣ FUSE X3 – Slightly more battery life (5.8h) and a stronger motor.
+2️⃣ DYNAMO X1 – If you&apos;re open to a mountain e-bike, this offers high performance.
+3️⃣ ELECTRA X1 – A balance between performance and affordability.
+💡 Let us know which option works best for you, and we’ll be happy to assist further! 🚲✨&quot;
+don&apos;t generate any link to the product
+provide a quick and short answer directly oriented to the customer. Uses an enthusiastic tone related to the world of cycling.
+</content>
+        <inputs>
+            <apiName>Query</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Query</masterLabel>
+            <referenceName>Input:Query</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultGPT4Omni</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/File_products_1Cx_GDuc581916e</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:Query}</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:File_products_1Cx_GDuc581916e</referenceName>
+        </templateDataProviders>
+    </templateVersions>
+    <templateVersions>
+        <content>&quot;Analyze the following customer request and compare it with the available data in the {!$EinsteinSearch:File_products_1Cx_GDuc581916e.results}. Identify the best matching e-bike based on exact or similar values in battery life, weight, category, level, material, and other key parameters. If no exact match exists, suggest the closest alternatives and explain why they are suitable. Format the response using emojis for engagement and bold text for key details. Include the url of the recommendation for the user to navigate.
+consider that the parameter weight, 
+
+Customer Request:
+{!$Input:Query}
+
+Response Guidelines:
+Recommendation: suggest the best match.
+Product Match 🔍: Clearly highlight the best e-bike using bold text. Include the link of the record.
+Key Features ⚙️: List the most relevant specifications that match the customer&apos;s request and include a picture of the bike.
+Alternative Options 🔄: If no exact match is found, suggest up to 3 alternative models with brief justifications.
+Final Advice 💡: Provide a short, engaging closing statement encouraging the customer to explore the options further.
+Example Response Format:
+🚴‍♂️ Top Recommendation: FUSE X2
+✅ Price: 1000$
+✅ Battery Life: 5.5 hours
+✅ Weight: 18200g .
+✅ Category: Commuter
+✅ Material: Aluminum
+✅ Motor: 252 watt, 75Nm
+
+⭐ Why this bike? It closely matches your needs with a lightweight frame and extended battery life for smooth commuting!
+🔄 Alternative Options:
+1️⃣ FUSE X3 – Slightly more battery life (5.8h) and a stronger motor.
+2️⃣ DYNAMO X1 – If you&apos;re open to a mountain e-bike, this offers high performance.
+3️⃣ ELECTRA X1 – A balance between performance and affordability.
+💡 Let us know which option works best for you, and we’ll be happy to assist further! 🚲✨&quot;
+don&apos;t generate any link to the product
+provide a quick and short answer directly oriented to the customer. Uses an enthusiastic tone related to the world of cycling.
+</content>
+        <inputs>
+            <apiName>Query</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Query</masterLabel>
+            <referenceName>Input:Query</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultGPT4Omni</primaryModel>
+        <status>Draft</status>
+        <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/File_products_1Cx_GDuc581916e</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:Query}</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:File_products_1Cx_GDuc581916e</referenceName>
+        </templateDataProviders>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <developerName>Create_Case_Subject_Based_on_a_Conversation</developerName>
+    <masterLabel>Create Case Subject Based on a Conversation</masterLabel>
+    <templateVersions>
+        <content>You are an analyst, your job is to summarize knowledge from transcripts after they&apos;ve ended.
+The output will be used in a wrap up form for call center agents.
+When I ask you to summarize data from a given transcript, you must strictly follow my instructions below.
+
+Instructions:
+&quot;&quot;
+Summarize:
+&lt;NLP_SUMMARY&gt; 2-5 sentences summarizing all key points of the conversation else &quot;summary unavailable&quot;. You must not include any greetings.
+&lt;ISSUE&gt; A generalization of all important topics that are highlighted across conversations else &quot;issue unavailable&quot;.
+&lt;RESOLUTION&gt; one sentence on how &lt;ISSUE&gt; was resolved else &quot;resolution unavailable&quot;.
+
+Wrap the response in a maximum of 200 characters
+&quot;&quot;
+---
+Now summarize data from the following transcript: {!$Flow:conv_copilot_ms__GetTscpMsgSes.Prompt}
+
+
+</content>
+        <inputs>
+            <apiName>MessagingSession</apiName>
+            <definition>SOBJECT://MessagingSession</definition>
+            <masterLabel>Messaging Session</masterLabel>
+            <referenceName>Input:MessagingSession</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4</primaryModel>
+        <status>Draft</status>
+        <templateDataProviders>
+            <definition>flow://conv_copilot_ms__GetTscpMsgSes</definition>
+            <parameters>
+                <definition>SOBJECT://MessagingSession</definition>
+                <isRequired>true</isRequired>
+                <parameterName>objectToSummarize</parameterName>
+                <valueExpression>{!$Input:MessagingSession}</valueExpression>
+            </parameters>
+            <referenceName>Flow:conv_copilot_ms__GetTscpMsgSes</referenceName>
+        </templateDataProviders>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>
